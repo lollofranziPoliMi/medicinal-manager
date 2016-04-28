@@ -90,7 +90,7 @@ main-build: lwip_tcpecho_freertos.axf
 lwip_tcpecho_freertos.axf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU Linker'
-	arm-none-eabi-gcc -nostdlib -L"C:\nxp\LPCOpen_platform_v0.51\applications\lpc18xx_43xx\examples\SerizII_lpc\lib_lpc_board" -L"C:\nxp\LPCOpen_platform_v0.51\applications\lpc18xx_43xx\examples\SerizII_lpc\emWin" -L"C:/nxp/LPCOpen_platform_v0.51/applications/lpc18xx_43xx/examples/SerizII_lpc/lwip_tcpecho_freertos\..\..\..\..\..\software\emWin\emWin516_library\LPCXpresso_4" -Xlinker -Map="lwip_tcpecho_freertos.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "lwip_freertos_4350.ld" -L "C:\nxp\LPCOpen_platform_v0.51\applications\lpc18xx_43xx\examples\SerizII_lpc\lwip_tcpecho_freertos\linkscripts" -o "lwip_tcpecho_freertos.axf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -nostdlib -L"C:\Documents and Settings\demoprivato\git\local-medicine-manager\lib_lpc_board" -L"C:\Documents and Settings\demoprivato\git\local-medicine-manager\emWin" -L"C:/Documents and Settings/demoprivato/git/local-medicine-manager/lwip_tcpecho_freertos\..\..\..\..\..\software\emWin\emWin516_library\LPCXpresso_4" -Xlinker -Map="lwip_tcpecho_freertos.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "lwip_freertos_4350.ld" -L "C:\Documents and Settings\demoprivato\git\local-medicine-manager\lwip_tcpecho_freertos\linkscripts" -o "lwip_tcpecho_freertos.axf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build
