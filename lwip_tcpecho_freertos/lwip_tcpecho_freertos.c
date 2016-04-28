@@ -636,7 +636,6 @@ int main(void)
 
 	Chip_RTC_Init();
 
-	//COMMENTO
 	/*Set current time for RTC 8:59:20PM, 2016-04-11 MONDAY 102*/
 	FullTime.time[RTC_TIMETYPE_SECOND]  	= 40;
 	FullTime.time[RTC_TIMETYPE_MINUTE]  	= 59;
